@@ -486,7 +486,7 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
 - [ ] `<hgroup> <q> <wbr>`
 - [ ] `<b> <i> <u>`
 
-#### Q31. The `**\_\_**` tag is used for marking up a short code snippet, while the `**\_\_**` tag is used for marking up a longer block of code.
+#### Q31. The `**\_\_**` tag is used for marking up a short code snippet, while the `**\_\_**` tag is used for marking up a longer block of code?
 
 - [ ] `<kdb>`, `<pre>`
 - [ ] `<pre>`, `<code>`
@@ -500,16 +500,14 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
 - [ ] It visually labels from fields.
 - [x] It programmatically associates a text label with an interface element.
 
-#### Q33. To get a link to open in a new window or tab, use the `**\_\_**` attribute.
+#### Q33. To get a link to open in a new window or tab, use the `**\_\_**` attribute?
 
 - [x] `_blank`
 - [ ] `_self`
 - [ ] `_new`
 - [ ] `_parent`
 
-#### Q34. What is the most semantically accurate way to mark up the sentence shown below? Note: "TLAs" stands for "three-letter acronyms."
-
-**We are fond of our TLAs in web design.**
+#### Q34. What is the most semantically accurate way to mark up the sentence shown below?
 
 - [ ]
 
@@ -843,7 +841,7 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
 - [x] It allows drawing on a bitmap via JavaScript.
 - [ ] It allows vector images to be rendered on the webpage.
 
-#### Q52. Which choice contains three valid block-level elements?</li>
+#### Q52. Which choice contains three valid block-level elements?
 
 - [ ] `<details> <abbr> <figcaption>`
 - [ ] `<canvas> <select> <noscript>`

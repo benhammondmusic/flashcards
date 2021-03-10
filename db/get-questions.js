@@ -13,6 +13,10 @@ const parseMdFile = function (data) {
   for (let idx in qas) {
     [question, answer, ref] = qas[idx].split('?\n');
 
+    question = question.split('. ')[1];
+
+    answer = answer.concat();
+
     // remove checked answer from Q
     const choices = answer.replace('[x]', '[ ]');
 

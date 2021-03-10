@@ -1,20 +1,31 @@
 const fs = require('fs');
-let data;
+
+/* 
+READ IN MD FILE, RETURN ARRAY OF TPOIC/QUESTION/CHOICES/ANSWER OBJECTS
+ */
+const parseMdFile = function (data) {
+  let qas = data.split('####'); // break into question-answer array
+  let topic = qas.shift().trim().replace('## ', '');
+
+  let qaObjects = [];
+
+  // iterate QAs, split into objects
+  for (let idx in qas) {
+    [question, answer, ref] = qas[idx].split('?\n');
+
+    // remove checked answer from Q
+    const choices = answer.replace('[x]', '[ ]');
+
+    qaObjects.push({ topic, question, choices, answer });
+    //   console.log(qaObjects[idx]);
+  }
+
+  return qaObjects;
+};
+
 try {
   data = fs.readFileSync('./css-quiz.md', 'utf8').toString();
+  console.log(parseMdFile(data));
 } catch (e) {
   console.log('Error:', e.stack);
-}
-
-let qas = data.split('####'); // break into question-answer array
-let topic = qas.shift(); // remove heading
-
-let qaObjects = [];
-
-// iterate QAs, split into objects
-for (let idx in qas) {
-  [q, a, ref] = qas[idx].split('?\n');
-  //   console.log('*Q*', q, '\n****A****', a);
-  qaObjects.push({ question: q, answer: a });
-  if (!a) console.log(qaObjects[idx]);
 }

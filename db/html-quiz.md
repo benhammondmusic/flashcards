@@ -95,9 +95,7 @@
 ```html
 <details>
   <summary>Parmesan Deviled Eggs</summary>
-  <p>
-    These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-  </p>
+  <p>These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.</p>
 </details>
 ```
 
@@ -105,9 +103,7 @@
 
 ```html
 <h4>▸ Parmesan Deviled Eggs</h4>
-<p>
-  These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-</p>
+<p>These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.</p>
 ```
 
 - [x]
@@ -115,9 +111,7 @@
 ```html
 <details open>
   <summary>Parmesan Deviled Eggs</summary>
-  <p>
-    These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-  </p>
+  <p>These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.</p>
 </details>
 ```
 
@@ -126,9 +120,7 @@
 ```html
 <details>
   <h4>▸ Parmesan Deviled Eggs</h4>
-  <p>
-    These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-  </p>
+  <p>These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.</p>
 </details>
 ```
 
@@ -163,7 +155,7 @@
 #### Q17. What should fill the blank in the HTML code bellow?
 
 ```html
-<form method="post" action="mailto:info@linkedin.com" ____="text/plain" >
+<form method="post" action="mailto:info@linkedin.com" ____="text/plain"></form>
 ```
 
 - [x] enctype
@@ -1023,9 +1015,8 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HT
 [Reference (w3schools)](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_video)
 
 #### Q66. What is the correct way to describe an empty element?
+
 - [ ] It has opening and closing tags but no child content.
 - [ ] It display nothing on a website.
 - [x] It has no child content and no closing tag.
 - [ ] It has child content but no closing tag.
-
-[Reference (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)

@@ -20,9 +20,11 @@ app.get('/topics', (req, res) => {
 // GET ALL QAs FROM A TOPIC
 app.get('/topics/:topicIdx/', (req, res) => {
   try {
+    if (req.params.topicIdx >= topics.length) throw new Error('topic index out of range');
     const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
     // console.log(parseMdFile(data));
     let allQA = parseMdFile(data);
+
     res.send(allQA);
   } catch (e) {
     console.log('**Error**:', e.stack);

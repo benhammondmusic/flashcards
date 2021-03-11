@@ -22,7 +22,6 @@ app.get('/topics/:topicIdx/', (req, res) => {
   try {
     if (req.params.topicIdx >= topics.length) {
       let msg = 'topic index out of range';
-      // console.log(msg);
       throw new Error(msg);
     }
     const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
@@ -40,12 +39,25 @@ app.get('/topics/:topicIdx/', (req, res) => {
 // GET ONE QA FROM A TOPIC
 app.get('/topics/:topicIdx/:qaIdx', (req, res) => {
   try {
+    if (req.params.topicIdx >= topics.length) {
+      let msg = 'topic index out of range';
+      throw new Error(msg);
+    }
+
     const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
-    // console.log(parseMdFile(data));
     let allQA = parseMdFile(data);
+
+    if (req.params.qaIdx >= allQA.length) {
+      let msg = 'question-answer index out of range';
+      throw new Error(msg);
+    }
+
+    res.status(200);
     res.send(allQA[req.params.qaIdx]);
   } catch (e) {
+    res.status(400);
     console.log('**Error**:', e.stack);
+    res.send(e.stack);
   }
 });
 

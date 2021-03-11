@@ -9,7 +9,7 @@ const topics = ['html', 'css', 'javascript', 'git'];
 const parseMdFile = require('./db/get-questions');
 
 app.get('/', (req, res) => {
-  res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topic to get list of available topics </li><li>/topic/{X} (where {X} is an index integer from the topic list) to get an array of question/answer objects from that topic.</li><li>/topic/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
+  res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topics to get list of available topics </li><li>/topics/{X} (where {X} is an index integer from the topic list) to get an array of question/answer objects from that topic.</li><li>/topics/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
 });
 
 // GET ALL TOPICS
@@ -18,14 +18,14 @@ app.get('/topics', (req, res) => {
 });
 
 // GET ALL QAs FROM A TOPIC
-app.get('/topics/:topicIdx/', (req, res) => {
+app.get('/topics/:topicStr/', (req, res) => {
   try {
-    if (req.params.topicIdx >= topics.length) {
-      let msg = 'topic index out of range';
+    if (topics.indexOf(req.params.topicStr) === -1) {
+      let msg = 'topic not found';
       throw new Error(msg);
     }
-    const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
-    // console.log(parseMdFile(data));
+
+    const data = fs.readFileSync(`./db/${req.params.topicStr}-quiz.md`, 'utf8').toString();
     let allQA = parseMdFile(data);
     res.status(200);
     res.send(allQA);
@@ -37,14 +37,14 @@ app.get('/topics/:topicIdx/', (req, res) => {
 });
 
 // GET ONE QA FROM A TOPIC
-app.get('/topics/:topicIdx/:qaIdx', (req, res) => {
+app.get('/topics/:topicStr/:qaIdx', (req, res) => {
   try {
-    if (req.params.topicIdx >= topics.length) {
-      let msg = 'topic index out of range';
+    if (topics.indexOf(req.params.topicStr) === -1) {
+      let msg = 'topic not found';
       throw new Error(msg);
     }
 
-    const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
+    const data = fs.readFileSync(`./db/${req.params.topicStr}-quiz.md`, 'utf8').toString();
     let allQA = parseMdFile(data);
 
     if (req.params.qaIdx >= allQA.length) {

@@ -8,17 +8,17 @@ const topics = ['html', 'css', 'javascript', 'git'];
 // UTIL TO READ IN MARKDOWN FILES
 const parseMdFile = require('./db/get-questions');
 
-app.get('/', (req, res) => {
+app.get('api/', (req, res) => {
   res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topics to get list of available topics </li><li>/topics/{X} (where {X} is an index integer from the topic list) to get an array of question/answer objects from that topic.</li><li>/topics/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
 });
 
 // GET ALL TOPICS
-app.get('/topics', (req, res) => {
+app.get('api/topics', (req, res) => {
   res.send({ topics });
 });
 
 // GET ALL QAs FROM A TOPIC
-app.get('/topics/:topicStr/', (req, res) => {
+app.get('api/topics/:topicStr/', (req, res) => {
   try {
     if (topics.indexOf(req.params.topicStr) === -1) {
       let msg = 'topic not found';
@@ -37,7 +37,7 @@ app.get('/topics/:topicStr/', (req, res) => {
 });
 
 // GET ONE QA FROM A TOPIC
-app.get('/topics/:topicStr/:qaIdx', (req, res) => {
+app.get('api/topics/:topicStr/:qaIdx', (req, res) => {
   try {
     if (topics.indexOf(req.params.topicStr) === -1) {
       let msg = 'topic not found';

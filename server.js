@@ -20,14 +20,20 @@ app.get('/topics', (req, res) => {
 // GET ALL QAs FROM A TOPIC
 app.get('/topics/:topicIdx/', (req, res) => {
   try {
-    if (req.params.topicIdx >= topics.length) throw new Error('topic index out of range');
+    if (req.params.topicIdx >= topics.length) {
+      let msg = 'topic index out of range';
+      // console.log(msg);
+      throw new Error(msg);
+    }
     const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
     // console.log(parseMdFile(data));
     let allQA = parseMdFile(data);
-
+    res.status(200);
     res.send(allQA);
   } catch (e) {
+    res.status(400);
     console.log('**Error**:', e.stack);
+    res.send(e.stack);
   }
 });
 

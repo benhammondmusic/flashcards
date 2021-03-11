@@ -27,9 +27,4 @@ const parseMdFile = function (data) {
   return qaObjects;
 };
 
-try {
-  data = fs.readFileSync('./css-quiz.md', 'utf8').toString();
-  console.log(parseMdFile(data));
-} catch (e) {
-  console.log('Error:', e.stack);
-}
+module.exports = parseMdFile;

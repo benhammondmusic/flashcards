@@ -9,19 +9,33 @@ const topics = ['html', 'css', 'javascript', 'git'];
 const parseMdFile = require('./db/get-questions');
 
 app.get('/', (req, res) => {
-  res.send('FLASH CARDS !!!');
+  res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topic to get list of available topics </li><li>/topic/{X} (where {X} is an index integer from the topic list) to get an array of question/answer objects from that topic.</li><li>/topic/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
 });
 
-app.get('/topic', (req, res) => {
+// GET ALL TOPICS
+app.get('/topics', (req, res) => {
   res.send({ topics });
 });
 
-app.get('/topic/:id', (req, res) => {
+// GET ALL QAs FROM A TOPIC
+app.get('/topics/:topicIdx/', (req, res) => {
   try {
-    const data = fs.readFileSync(`./db/${topics[req.params.id]}-quiz.md`, 'utf8').toString();
+    const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
     // console.log(parseMdFile(data));
     let allQA = parseMdFile(data);
     res.send(allQA);
+  } catch (e) {
+    console.log('**Error**:', e.stack);
+  }
+});
+
+// GET ONE QA FROM A TOPIC
+app.get('/topics/:topicIdx/:qaIdx', (req, res) => {
+  try {
+    const data = fs.readFileSync(`./db/${topics[req.params.topicIdx]}-quiz.md`, 'utf8').toString();
+    // console.log(parseMdFile(data));
+    let allQA = parseMdFile(data);
+    res.send(allQA[req.params.qaIdx]);
   } catch (e) {
     console.log('**Error**:', e.stack);
   }

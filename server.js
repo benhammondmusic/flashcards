@@ -2,8 +2,21 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 const fs = require('fs');
+const cors = require('cors');
 
 const topics = ['html', 'css', 'javascript', 'git'];
+
+/* middleware */
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+/* cors */
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 // UTIL TO READ IN MARKDOWN FILES
 const parseMdFile = require('./db/get-questions');

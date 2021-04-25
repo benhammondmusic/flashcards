@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-/* 
-READ IN MD FILE, RETURN ARRAY OF TPOIC/QUESTION/CHOICES/ANSWER OBJECTS
+/*
+READ IN MD FILE, RETURN ARRAY OF TOPIC/QUESTION/CHOICES/ANSWER OBJECTS
  */
 const parseMdFile = function (data) {
   let qas = data.split('####'); // break into question-answer array

@@ -4,7 +4,10 @@
   "description": "Questions and Answers for Developing Devs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "craco start",
+    "build": "craco build",
+    "start:proxy": "REACT_APP_PROXY=true craco start",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",

@@ -82,5 +82,5 @@ app.get('/api/topics/:topicStr/:qaIdx', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Jr-Dev-Flashcards-API listening at http://localhost:${port}`);
+  console.log(`Jr-Dev-Flashcards-API listening at ${port}`);
 });

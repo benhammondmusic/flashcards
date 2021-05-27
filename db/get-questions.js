@@ -14,7 +14,7 @@ const parseMdFile = function (data) {
     [question, answer, ref] = qas[idx].split('?\n');
 
     question = question.split('. ')[1];
-
+    console.log(question);
     answer = answer.concat();
 
     // remove checked answer from Q

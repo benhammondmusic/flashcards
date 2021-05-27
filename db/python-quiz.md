@@ -538,7 +538,7 @@ my_game = Game(self)
 my_game.roll_dice(self)
 ```
 
-#### Q40. Correct representation of doctest for function in Python
+#### Q40. Correct representation of doctest for function in Python?
 
 - [ ]
 
@@ -706,7 +706,7 @@ def sum(a, b):
 - [x] in all caps with underscores separating words -- e.g. `MAX_VALUE = 255`
 - [ ] in mixed case without using underscores to separate words -- e.g. `MaxValue = 255`
 
-#### Q56. Describe the functionality of a deque.
+#### Q56. Describe the functionality of a deque.?
 
 - [ ] A deque adds items to one side and remove items from the other side.
 - [ ] A deque adds items to either or both sides, but only removes items from the top.

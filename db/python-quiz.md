@@ -1,4 +1,4 @@
-## Python (Programming Language)
+## Python
 
 #### Q1. What is an abstract class?
 

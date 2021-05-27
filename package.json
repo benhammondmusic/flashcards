@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/benhammondmusic/flashcards.git"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Ben Hammond",
   "license": "MIT",
   "bugs": {

@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Questions and Answers for Developing Devs",
   "main": "server.js",
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "start:proxy": "REACT_APP_PROXY=true craco start",
-    "eject": "react-scripts eject"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benhammondmusic/flashcards.git"
@@ -21,7 +15,6 @@
   "homepage": "https://github.com/benhammondmusic/flashcards#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "craco": "0.0.3",
     "express": "^4.17.1"
   }
 }

@@ -1,4 +1,4 @@
-## React.js
+## React
 
 #### Q1. If you want to import just the Component from the React library, what syntax do you use?
 
@@ -141,7 +141,7 @@ ReactDOM.render(<Dish />, document.getElementById('root'));
 - [ ] component
 - [x] `h1`
 
-#### 15. What does this React element look like given the following function? (Alternative: Given the following code, what does this React element look like?)
+#### 15. What does this React element look like given the following function?
 
 ```javascript
 React.createElement('h1', null, "What's happening?");
@@ -316,7 +316,7 @@ const Heading = () => {
 - [ ] with webpack
 - [ ] with code splitting
 
-#### Q34. All React components must act like `**\_\_**` with respect to their props.
+#### Q34. All React components must act like `**\_\_**` with respect to their props?
 
 - [ ] monads
 - [x] pure functions
@@ -634,7 +634,7 @@ const Star = ({ selected = false }) => <Icon color={selected ? 'red' : 'grey'} /
 - [x] grey
 - [ ] white
 
-#### Q60. Which answer best describes a function component?(Not sure answer)
+#### Q60. Which answer best describes a function component?
 
 - [ ] `A function component is the same as a class component.`
 - [x] `A function component accepts a single props object and returns a React element.`
@@ -648,11 +648,11 @@ const Star = ({ selected = false }) => <Icon color={selected ? 'red' : 'grey'} /
 - [x] `No library. fetch() is supported by most browsers.`
 - [ ] `React`
 
-#### Q62.What is the difference between the click behaviors of these two buttons(assuming that this.handleClick is bound correctly)
+#### Q62.What is the difference between the click behaviors of these two buttons(assuming that this.handleClick is bound correctly)?
 
 ```javascript
 
-A. <button onClick=fthis.handleClickl>Click Me</button>
+A. <button onClick=this.handleClick>Click Me</button>
 B. <button onClick={event => this.handleClick(event)}>Click Me</button>
 
 ```
@@ -681,25 +681,35 @@ useEffect(() => {
 <Route path="/:id" />
 ```
 
-- [ ] ````javascript
-              <Route path="/:id"> <About />
-              </Route>
-          ```
-      ````
-- [ ] ````javascript
-              <Route path="/tid" about={Component} />
-          ```
-      ````
-- [ ] ````javascript
-               <Route path="/:id" route={About} />
-          ```
-      ````
-- [ ] ````javascript
-              <Route>
-                <About path="/:id" />
-              </Route>
-          ```
-      ````
+- [ ] ``````javascript
+      (
+        <Route path="/:id">
+          {' '}
+          <About />
+        </Route>
+      )```
+              ````
+          `````;
+      ``````
+- [ ] ``````javascript
+      (<Route path="/tid" about={Component} />)```
+              ````
+          `````;
+      ``````
+- [ ] ``````javascript
+      (<Route path="/:id" route={About} />)```
+              ````
+          `````;
+      ``````
+- [ ] ``````javascript
+      (
+        <Route>
+          <About path="/:id" />
+        </Route>
+      )```
+              ````
+          `````;
+      ``````
 
 #### Q65. Which class-based component is equivalent to this function component?
 
@@ -707,26 +717,36 @@ useEffect(() => {
 const Greeting ({ name }) > <h1>Hello {name}!</h1>;
 ```
 
-- [ ] ````javascript
-              class Greeting extends React.Component {
-              constructor() { return <h1>Hello (this.props.name)!</h1>; }
-              }
-          ```
-      ````
-- [ ] ````javascript
-             class Greeting extends React.Component { <h1>Hello (this.props.name}!</h1>; }
-          ```
-      ````
-- [ ] ````javascript
-             class Greeting extends React.Component { return <h1>Hello (this.props.name) 1</h1>; }
-          ```
-      ````
-- [ ] ````javascript
-              class Greeting extends React.Component ( render({ name }) {
-                return <h1>Hello (name)} !</h1>;
-              })
-          ```
-      ````
+- [ ] ``````javascript
+      class Greeting extends React.Component {
+        constructor() {
+          return <h1>Hello (this.props.name)!</h1>;
+        }
+      }
+      ```
+              ````
+          `````;
+      ``````
+- [ ] ``````javascript
+                     class Greeting extends React.Component { <h1>Hello (this.props.name}!</h1>; }
+                  ```
+              ````
+          `````
+      ``````
+- [ ] ``````javascript
+                     class Greeting extends React.Component { return <h1>Hello (this.props.name) 1</h1>; }
+                  ```
+              ````
+          `````
+      ``````
+- [ ] ``````javascript
+                      class Greeting extends React.Component ( render({ name }) {
+                        return <h1>Hello (name)} !</h1>;
+                      })
+                  ```
+              ````
+          `````
+      ``````
 
 #### Q66. Give the code below, what does the second argument that is sent to the render function describe?
 

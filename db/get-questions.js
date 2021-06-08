@@ -29,7 +29,7 @@ const parseMdFile = function (data) {
   for (let idx in qas) {
     [question, answer, ref] = qas[idx].split('?\n');
 
-    question = question.split('. ')[1];
+    [number, question] = question.split('. ');
     console.log(question);
     answer = answer.concat();
 

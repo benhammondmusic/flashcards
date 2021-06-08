@@ -11,19 +11,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* cors */
-// const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://jr-dev-flashcards.netlify.app'];
-// var corsOptions = {
-//   optionsSuccessStatus: 200,
-//   origin: function (origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-// };
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://jr-dev-flashcards.netlify.app'];
+var corsOptions = {
+  optionsSuccessStatus: 200,
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // UTIL TO READ IN MARKDOWN FILES
 const parseMdFile = require('./db/get-questions');

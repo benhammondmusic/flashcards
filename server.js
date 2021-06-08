@@ -11,25 +11,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* cors */
-const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://jr-dev-flashcards.netlify.app'];
-var corsOptions = {
-  optionsSuccessStatus: 200,
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
+// const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://jr-dev-flashcards.netlify.app'];
+// var corsOptions = {
+//   optionsSuccessStatus: 200,
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // UTIL TO READ IN MARKDOWN FILES
 const parseMdFile = require('./db/get-questions');
 
 app.get('/api/', (req, res) => {
-  res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topics to get list of available topics </li><li>/topics/{X} (where {X} is an index integer from the topic list) to get an array of question/answer objects from that topic.</li><li>/topics/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
+  res.send('JR DEV QUESTION/ANSWERS!<ul> <li>/topics to get list of available topics </li><li>/topics/{X} (where {X} is an exact string from the topic list) to get an array of question/answer objects from that topic.</li><li>/topics/{X}/{Y} (where {Y} is an index integer from the topics question/answer list) to get a single question/answer object from that topic.</li></ul>');
 });
 
 // GET ALL TOPICS

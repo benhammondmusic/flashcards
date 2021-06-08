@@ -27,16 +27,16 @@ const parseMdFile = function (data) {
 
   // iterate QAs, split into objects
   for (let idx in qas) {
-    [question, answer, ref] = qas[idx].split('?\n');
+    [questionTitle, answer, ref] = qas[idx].split('?\n');
 
-    [number, question] = question.split('. ');
-    console.log(question);
+    [number, question] = questionTitle.split('. ');
+    number = number.trim();
     answer = answer.concat();
 
     // remove checked answer from Q
     const choices = answer.replace('[x]', '[ ]');
 
-    qaObjects.push({ topic, question, choices, answer });
+    qaObjects.push({ topic, number, question, choices, answer });
     //   console.log(qaObjects[idx]);
   }
 

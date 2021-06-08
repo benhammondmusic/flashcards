@@ -14,22 +14,7 @@
 - [ ] Only a forEach statement lets you specify your own iterator.
 - [ ] A forEach statement is generic, but a for statement can be used only with an array.
 
-#### Q3. Review the code below. Which statement calls the addTax function and passes 50 as an argument?
-
-```js
-function addTax(total) {
-  return total * 1.05;
-}
-```
-
-- [ ] addTax = 50;
-- [ ] return addTax 50;
-- [x] addTax(50);
-- [ ] addTax 50;
-
-#### Q3 How would you use this function to find out how much tax should be paid on \$50?
-
-`(Version 2, possibly an updated version)`
+#### Q3. How would you use this function to find out how much tax should be paid on \$50?
 
 ```js
 function addTax(total) {

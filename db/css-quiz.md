@@ -231,7 +231,7 @@ section + p {
 - [x] Paragraphs one will be red, paragraph two will be blue.
 - [ ] Both paragraphs will be red.
 
-#### Q16.What are three valid ways of adding CSS to an HTML page?
+#### Q16. What are three valid ways of adding CSS to an HTML page?
 
 - [ ]
 
@@ -367,7 +367,7 @@ p {
 - [ ] The rem unit is relative to the font-size of the containing (parent) element.
 - [x] The rem unit is relative to the font-size of the root element of the page.
 
-#### Q26.Which of these would give a block element rounded corners?
+#### Q26. Which of these would give a block element rounded corners?
 
 - [ ] corner-curve: 10px
 - [ ] border-corner: 10px
@@ -761,7 +761,7 @@ p:first-child {
 - [ ] It can be used to quickly test local CSS overrides.
 - [ ] It reduces conflict with other CSS definition methods.
 
-#### Q63.Which W3C status code represents a CSS specification that is fully implemented by modern browsers?
+#### Q63. Which W3C status code represents a CSS specification that is fully implemented by modern browsers?
 
 - [ ] Proposed Recommendation
 - [ ] Working Draft

@@ -7,14 +7,14 @@
 - [ ] the main query
 - [x] the subquery
 
-#### Q2. You need to export the entire database, including the database objects, in addition to the data. Which command-line tool do you use?
+#### Q2. You need to export the entire database, including the database objects, in addition to the data.;Which command-line tool do you use?
 
 - [ ] mysqlexport
 - [ ] mysqladmin
 - [x] mysqldump
 - [ ] mysqld
 
-#### Q3. You must ensure the accuracy and reliability of the data in your database. You assign some constraints to limit the type of data that can go into a table. What type of constraints are you assigning?
+#### Q3. You must ensure the accuracy and reliability of the data in your database; You assign some constraints to limit the type of data that can go into a table; What type of constraints are you assigning?
 
 - [ ] row level
 - [ ] database level
@@ -28,7 +28,7 @@
 - [x] --help
 - [ ] -h
 
-#### Q5. MySQL uses environment variables in some of the programs and command-line operations. Which variable is used by the shell to find MySQL programs?
+#### Q5. MySQL uses environment variables in some of the programs and command-line operations; Which variable is used by the shell to find MySQL programs?
 
 - [ ] DIR
 - [ ] HOME
@@ -76,7 +76,7 @@
 - [ ] VARCHAR
 - [ ] LONGTEXT
 
-#### Q8. Management has requested that you build an employee database. You start with the employee table. What is the correct syntax?
+#### Q8. Management has requested that you build an employee database; You start with the employee table; What is the correct syntax?
 
 - [ ]
 
@@ -130,7 +130,7 @@
     8 );
 ```
 
-#### Q9. You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?
+#### Q9. You are working with the tables as shown in this diagram; You need to generate the list of customers who purchased certain car models; Which SQL clause do you use?
 
 ![mysql Q09](images/mysql_q09.jpg)
 
@@ -154,14 +154,14 @@
 - [ ] normalized database
       `NOT SURE THE QUESTION IS CORRECT. Logical, physical and normalized are all products of the designing phase in this order.`
 
-#### Q12. MySQL server can operate in different SQL modes, depending on the value of the sql_mode system variable. Which mode changes syntax and behavior to conform more closely to standard SQL?
+#### Q12. MySQL server can operate in different SQL modes, depending on the value of the sql_mode system variable; Which mode changes syntax and behavior to conform more closely to standard SQL?
 
 - [ ] TRADITIONAL
 - [x] ANSI
 - [ ] MSSQL
 - [ ] STRICT
 
-#### Q13. MySQL programs are a set of command-line utilities that are provided with typical MySQL distributions. MySQL is designed to be a database **_ and _** ?
+#### Q13. MySQL programs are a set of command-line utilities that are provided with typical MySQL distributions; MySQL is designed to be a database **_ and _** ?
 
 - [ ] database and programming
 - [ ] user and administrator
@@ -248,14 +248,14 @@
 - [ ] SELECT \* FROM movies ORDER TABLE by name
 - [ ] SELECT \* FROM movies FILTER BY name
 
-#### Q25. A trigger is a database object that is associated with a table, and that activates when a particular event occurs for the table. Which three events are these?
+#### Q25. A trigger is a database object that is associated with a table, and that activates when a particular event occurs for the table; Which three events are these?
 
 - [x] INSERT, UPDATE, DELETE
 - [ ] CREATE, ALTER, DROP
 - [ ] OPEN, FETCH, CLOSE
 - [ ] DECLARE, SET, SELECT
 
-#### Q26. You are working with very large tables in your database. Which SQL clause do you use to prevent exceedingly large query results?
+#### Q26. You are working with very large tables in your database; Which SQL clause do you use to prevent exceedingly large query results?
 
 - [ ] UNIQUE
 - [x] LIMIT
@@ -297,7 +297,7 @@
 - [ ] minimum of three columns
 - [x] primary key
 
-#### Q32. MySQL option files provide a way to specify commonly used options so that they need not be entered on the command line each time you run a program. What is another name for the option files?
+#### Q32. MySQL option files provide a way to specify commonly used options so that they need not be entered on the command line each time you run a program; What is another name for the option files?
 
 - [ ] variable settings
 - [x] configuration files
@@ -311,7 +311,7 @@
 - [ ] grant tables
 - [x] data directory
 
-#### Q34. You need to export the data in the customers table into a CSV file, with columns headers in the first row. Which clause do you add to your MySQL command?
+#### Q34. You need to export the data in the customers table into a CSV file, with columns headers in the first row; Which clause do you add to your MySQL command?
 
 - [ ] JOIN
 - [ ] WITH HEADERS
@@ -332,7 +332,7 @@
 - [x] the subquery must return a single value.
 - [ ] the subquery must return at least one value.
 
-#### Q37. Each time MySQL is upgraded, it is best to execute mysql_upgrade, which looks for incompatibilities with the upgraded MySQL server. What does this command do, upon finding a table with a possible incompatibility?
+#### Q37. Each time MySQL is upgraded, it is best to execute mysql_upgrade, which looks for incompatibilities with the upgraded MySQL server; What does this command do, upon finding a table with a possible incompatibility?
 
 - [x] it performs a table check and, if problems are found, attempts a table repair.
 - [ ] it stops and notifies the server administrator that the upgrade cannot complete until the incompatibility issue are resolved.
@@ -353,7 +353,7 @@
 - [ ] large
 - [ ] new
 
-#### Q40. later versions of mysql support the native json data type for storing json documents. What is a drawback of json columns?
+#### Q40. later versions of mysql support the native json data type for storing json documents; What is a drawback of json columns?
 
 - [ ] inefficient for storing json documents
 - [x] cannot be indexed directly
@@ -367,7 +367,7 @@
 - [ ] load data local infile (also correct but only if the file is from the client)
 - [ ] extended insert statement
 
-#### Q43. See tables in the diagram. Make sure that any record added to the purchase table consists of a customerId, which exists in the customer table and a carId, which exists in the car table. You decide to use a trigger to do the validation. Which one?
+#### Q43. See tables in the diagram; Make sure that any record added to the purchase table consists of a customerId, which exists in the customer table and a carId, which exists in the car table; You decide to use a trigger to do the validation; Which one?
 
 ![mysql Q43](images/mysql_q43.jpg)
 
@@ -390,28 +390,28 @@
 - [x] insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),
       ('Mercedes', 'C', 2003)
 
-#### Q45. You need an exact copy of a table with all columns and indexes. How?
+#### Q45. You need an exact copy of a table with all columns and indexes; How?
 
 - [ ] create table
 - [ ] clone table
 - [ ] insert into
 - [x] show create table
 
-#### Q46. you need to make your mysql system secure against hackers. What are you not supposed to do?
+#### Q46. you need to make your mysql system secure against hackers; What are you not supposed to do?
 
 - [ ] Run the server as normal user
 - [x] grant process or super privilege to other user
 - [ ] run the server as the unix root user
 - [ ] use the compressed protocol
 
-#### Q47. You manage a database with a table "customers". You created a temporary table also called "customers" with which you are working for the duration of your session. You need to recreate the temporary table with different specs. Which command do you need to run first?
+#### Q47. You manage a database with a table "customers"; You created a temporary table also called "customers" with which you are working for the duration of your session; You need to recreate the temporary table with different specs; Which command do you need to run first?
 
 - [ ] create temporary table customers;
 - [ ] drop temp table customers;
 - [ ] drop table customers;
 - [x] drop temporary table customers;
 
-#### Q48. you need to run a complex query with recursive subqueries but without creating a stored procedure or a function. Which command or clause do you use?
+#### Q48. you need to run a complex query with recursive subqueries but without creating a stored procedure or a function; Which command or clause do you use?
 
 - [ ] collate
 - [x] union
@@ -463,14 +463,14 @@
 - [ ] mysql.admin;
 - [x] mysql.user;
 
-#### Q55. Management has requested that you build an employee database. You need to include each employee's current position and salary, as well as all prior positions and salaries with the company. You decide to use a one-to-many structure: an employee table with the main information such as name and address, and an employment table with position and salary history. You can use the employeeID field to connect them. What is employment.employeeID an example of?
+#### Q55. Management has requested that you build an employee database, You need to include each employee's current position and salary, as well as all prior positions and salaries with the company, You decide to use a one-to-many structure: an employee table with the main information such as name and address, and an employment table with position and salary history, You can use the employeeID field to connect them: What is employment.employeeID an example of?
 
 - [ ] primary key;
 - [ ] secondary key;
 - [x] foreign key;
 - [ ] alternate key;
 
-#### Q56. In recent versions of MySQL (8.0+), what's the correct syntax to declare a CTE (Common Table Expression)?
+#### Q56. In recent versions of MySQL (8+), what's the correct syntax to declare a CTE (Common Table Expression)?
 
 - [ ] WITH (SELECT id FROM users) as cte, SELECT ...
 - [ ] WITH (SELECT id FROM users) as cte SELECT ...
@@ -484,7 +484,7 @@
 - [ ] to make the system faster
 - [ ] to prevent data anomalies
 
-#### Q58. The code snippet below is used to read data from an XML file into a table. Which XML structure is _not_ supported by the statement?
+#### Q58. The code snippet below is used to read data from an XML file into a table; Which XML structure is _not_ supported by the statement?
 
 ```
 1 LOAD XML LOCAL INFILE 'cars.xml'
@@ -524,7 +524,7 @@
 </car>
 ```
 
-#### Q59. You are loading data into a table. Which command can you use to make sure that all data is inserted and duplicated rows are discarded?
+#### Q59. You are loading data into a table; Which command can you use to make sure that all data is inserted and duplicated rows are discarded?
 
 - [x] `INSERT IGNORE`
 - [ ] `INSERT UNIQUE`
@@ -538,16 +538,7 @@
 - [ ] It deletes rows one by one on tables with foreign key constraints.
 - [ ] It does not invoke the `DELETE` triggers associated with the table.
 
-#### Q61. You are working with the tables as shown in this diagram. You need to get the number of cars sold per the home state of each customer's residence. How can you accomplish this?
-
-![mysql Q61](images/mysql_q61.png)
-
-- [ ] `SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`
-- [ ] `SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`
-- [x] `SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`
-- [ ] `SELECT state, COUNT(*) FROM customers GROUP BY state;`
-
-#### Q62. In data migration, there is often a need to delete duplicate rows as part of data cleanup. Which statement works best?
+#### Q62. In data migration, there is often a need to delete duplicate rows as part of data cleanup; Which statement works best?
 
 - [ ] `DELETE DUPS`
 - [ ] `DELETE DISTINCT`
@@ -568,14 +559,14 @@
 - [x] differential
 - [ ] incremental
 
-#### Q65. You need to restore a MySQL database from a backup file. Which command-line tool do you use for the actual data import, after re-creating the database?
+#### Q65. You need to restore a MySQL database from a backup file; Which command-line tool do you use for the actual data import, after re-creating the database?
 
 - [ ] mysqld
 - [x] mysql
 - [ ] mysqladmin
 - [ ] mysqldump
 
-#### Q66. You are importing data as JSON into a new table. You run CREATE TABLE json_data ( city JSON ); and insert rows into this table. What is the correct syntax to see the list of cities?
+#### Q66. You are importing data as JSON into a new table; You run CREATE TABLE json_data ( city JSON ); and insert rows into this table; What is the correct syntax to see the list of cities?
 
 - [ ] SELECT city FROM json_data;
 - [x] SELECT city->>'\$.name' city FROM json_data;
@@ -589,7 +580,7 @@
 - [ ] STORAGE
 - [ ] TABLESPACE
 
-#### Q68. You are working with the table in this diagram. You want to use full-text search to find the customers who live on a street or a drive. What is the command to do that?
+#### Q68. You are working with the table in this diagram; You want to use full-text search to find the customers who live on a street or a drive; What is the command to do that?
 
 Table name: customers
 | ID | lastname | firstname | phone | address | city | state | zip |
@@ -702,7 +693,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 - [ ] Stored procedures are secure, because applications can be given access to stored procedures and not any underlying variables
 - [ ] Stored procedures are not secure, because they can execute statements to drop tables or bulk delete data
 
-#### Q79. Management has requested that you build an employee database. You start with the employee table. What is the correct syntax?
+#### Q79. Management has requested that you build an employee database; You start with the employee table; What is the correct syntax?
 
 - [ ]
 

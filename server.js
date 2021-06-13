@@ -4,7 +4,7 @@ const port = process.env.PORT || 3001;
 const fs = require('fs');
 const cors = require('cors');
 
-const topics = ['reactjs', 'python', 'git', 'html', 'css', 'javascript'];
+const topics = ['reactjs', 'git', 'mysql', 'python', 'html', 'css', 'javascript'];
 
 /* middleware */
 app.use(express.json());
